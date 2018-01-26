@@ -1,0 +1,49 @@
+<div class="pad_top">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h4 class="card-title">{{img.name}}</h4>
+          </div>
+        </div>
+        <div class="col-md-12">
+            <div class="img_result">                
+                <img [attr.usemap]="'#'+img.id" class="imgshow" [attr.src]="img.src">
+                <map [attr.name]="img.id">
+                    <area style="outline: red solid 2px;"
+                          *ngFor="let area of img.maps"
+                          shape="rect" [attr.coords]="area.coords.join()"
+                          [attr.href]="area.link_url || 'javascript:void(0)'" 
+                          [attr.title]="area.description" 
+                          target="_blank" />                        
+                </map>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="pad_top">
+    <div class="container">
+      <div class="row"  *ngFor="let imge of img.pic_url">
+          <div class="col-md-12">
+            <div class="card-body">
+              <h4 class="card-title">{{imge.name}}</h4>
+            </div>
+          </div>
+          <div class="col-md-12">
+              <div class="img_result">                
+                  <img [attr.usemap]="'#'+imge.id" class="imgshow" [attr.src]="imge.src">
+                  <map [attr.name]="imge.id">
+                      <area style="outline: red solid 2px;"
+                            *ngFor="let area of imge.maps"
+                            shape="rect" [attr.coords]="area.coords.join()"
+                            [attr.href]="area.link_url || 'javascript:void(0)'" 
+                            [attr.title]="area.description" 
+                            target="_blank" />                        
+                  </map>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div> -->

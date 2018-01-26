@@ -1,0 +1,218 @@
+{
+  "pic_url": [{
+      "id": "imgMap1",
+      "name": "Monitor Desk View",
+      "src": "../assets/images/img.jpg",
+      "detail": "<h1>Show Monitor Desk View</h1><p>Width: 120px</p><p>Height: 150px</p>",
+      "maps": [{
+          "coords": [0, 336, 350, 430],
+          "description": "Notebook Box",
+          "link_url": "notebook.png"
+        },
+        {
+          "coords": [
+            255,
+            23,
+            688,
+            322
+          ],
+          "description": "Laptop",
+          "link_url": "laptop.pnh"
+        },
+        {
+          "coords": [
+            716,
+            4,
+            875,
+            371
+          ],
+          "description": "flowerjug",
+          "link_url": "flowerjug.png"
+        },
+        {
+          "coords": [
+            654,
+            368,
+            858,
+            421
+          ],
+          "description": "Mobile",
+          "link_url": "mobile.png"
+        }
+      ],
+      "show": "false"
+    },
+    {
+      "id": "imgMap2",
+      "name": "Ocean View",
+      "src": "../assets/images/ocean.jpg",
+      "detail": "<h2>Show Ocean View</h2><p>Width: 120px</p><p>Height: 150px</p>",
+      "maps": [{
+          "coords": [0, 336, 350, 430],
+          "description": "Notebook Box",
+          "link_url": "notebook.png"
+        },
+        {
+          "coords": [
+            255,
+            23,
+            688,
+            322
+          ],
+          "description": "Laptop",
+          "link_url": "laptop.pnh"
+        },
+        {
+          "coords": [
+            716,
+            4,
+            875,
+            371
+          ],
+          "description": "flowerjug",
+          "link_url": "flowerjug.png"
+        },
+        {
+          "coords": [
+            654,
+            368,
+            858,
+            421
+          ],
+          "description": "Mobile",
+          "link_url": "mobile.png"
+        }
+      ],
+      "show": "false"
+    },
+    {
+      "id": "imgMap3",
+      "name": "Paris View",
+      "src": "../assets/images/paris.jpg",
+      "detail": "<h3>Show Paris View</h3><p>Width: 120px</p><p>Height: 150px</p>",
+      "maps": [{
+          "coords": [0, 336, 350, 430],
+          "description": "Notebook Box",
+          "link_url": "notebook.png"
+        },
+        {
+          "coords": [
+            255,
+            23,
+            688,
+            322
+          ],
+          "description": "Laptop",
+          "link_url": "laptop.pnh"
+        },
+        {
+          "coords": [
+            716,
+            4,
+            875,
+            371
+          ],
+          "description": "flowerjug",
+          "link_url": "flowerjug.png"
+        },
+        {
+          "coords": [
+            654,
+            368,
+            858,
+            421
+          ],
+          "description": "Mobile",
+          "link_url": "mobile.png"
+        }
+      ],
+      "show": "false"
+    },
+    {
+      "id": "imgMap4",
+      "name": "Wedding",
+      "src": "../assets/images/wedding.jpg",
+      "detail": "<h4>Show Wedding</h4><p>Width: 120px</p><p>Height: 150px</p>",
+      "maps": [{
+          "coords": [0, 336, 350, 430],
+          "description": "Notebook Box",
+          "link_url": "notebook.png"
+        },
+        {
+          "coords": [
+            255,
+            23,
+            688,
+            322
+          ],
+          "description": "Laptop",
+          "link_url": "laptop.pnh"
+        },
+        {
+          "coords": [
+            716,
+            4,
+            875,
+            371
+          ],
+          "description": "flowerjug",
+          "link_url": "flowerjug.png"
+        },
+        {
+          "coords": [
+            654,
+            368,
+            858,
+            421
+          ],
+          "description": "Mobile",
+          "link_url": "mobile.png"
+        }
+      ],
+      "show": "false"
+    },
+    {
+      "IdName": "imgMap5",
+      "name": "Rocks",
+      "src": "../assets/images/rocks.jpg",
+      "detail": "<h5>Show Rocks view</h5><p>Width: 120px</p><p>Height: 150px</p>",
+      "maps": [{
+          "coords": [0, 336, 350, 430],
+          "description": "Notebook Box",
+          "link_url": "notebook.png"
+        },
+        {
+          "coords": [
+            255,
+            23,
+            688,
+            322
+          ],
+          "description": "Laptop",
+          "link_url": "laptop.pnh"
+        },
+        {
+          "coords": [
+            716,
+            4,
+            875,
+            371
+          ],
+          "description": "flowerjug",
+          "link_url": "flowerjug.png"
+        },
+        {
+          "coords": [
+            654,
+            368,
+            858,
+            421
+          ],
+          "description": "Mobile",
+          "link_url": "mobile.png"
+        }
+      ],
+      "show": "false"
+    }
+  ]
+}

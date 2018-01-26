@@ -1,0 +1,588 @@
+body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    font-weight: 400;
+    border-radius: .3rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    margin: 1em;
+}
+.header,.link{
+  width: 100%;
+} 
+.img_design{
+  margin: 2em
+}
+#output_image {
+    max-width: 300px;
+}
+.view {
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    text-align: center;
+    margin: 0 auto;
+    min-height: 248px;
+}
+#image_preview,#image_preview img{
+    margin: 1em;
+}
+#image_preview img {
+    width: 100%;
+    max-width: 500px;
+
+}
+.view img,#image_preview img
+.view video {
+    display: block;
+    position: relative;
+    border-radius: 2px 2px 0 0;
+    max-width: 100%;
+    min-height: 248px;
+    max-height: 248px;
+}
+
+.hm-white-slight .full-bg-img,
+.hm-white-slight .mask {
+    background-color: rgba(255, 255, 255, .1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-attachment: fixed;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 1;
+}
+
+.btn-floating i {
+    display: inline-block;
+    width: inherit;
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 47px;
+    text-align: center;
+}
+
+.card .btn-action {
+    margin: -23px 20px;
+    margin-left: auto;
+    background-color: #929fba;
+    height: 47px;
+    width: 47px;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    line-height: 0;
+}
+
+.btn-floating {
+    position: relative;
+    z-index: 1;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    width: 47px;
+    height: 47px;
+    padding: 0;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: #a6c;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.card-body .card-title{
+	padding: 0 8px;
+    letter-spacing: 1px;
+    font-size: 150%;
+    border-bottom: 2px solid #c5c5c5;
+}
+.card-body .card-title::first-letter {
+    font-size: 200%;
+    font-weight: 600;
+    color: #3c3c3c;
+    text-transform: capitalize;
+}
+.navbar {
+    background-color: #243a51;
+    color: #fff;
+    text-align: center;
+}
+.navbar-text {
+    display: inline-block;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    font-family: Roboto,sans-serif;
+        font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+}
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+.search {
+  margin-bottom: 30px;
+}
+
+.items {
+  
+}
+/*
+[data-filter-item] {
+  padding: 15px;
+  background-color: #ccc;
+  border: 1px solid #fff;
+}*/
+
+.hidden {
+  display: none;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 180px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 1);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+input[type=file] {
+    display: block;
+    background: white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    padding:1em;
+    width: 100%;
+    border: 1px solid #e4e4e4;
+}
+.extracss{
+    padding:1em 3em;
+    font-size: 15px;
+
+}
+.add_area{
+  margin: 40px 0px;
+  margin-top: 0   ;
+}
+
+a.button {
+  display: block;
+  position: relative;
+  float: left;
+  width: 120px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  color: #FFF;
+  border-radius: 5px;
+  transition: all 0.2s ;
+}
+
+/* FLOAT */
+.btnFloat {
+  background: none;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.btnFloat:before {
+  content: 'Upload Img';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 50px;
+  border-radius: 5px;
+  transition: all 0.2s ;
+}
+
+.btnBlueGreen.btnFloat:before {
+  background: #00AE68;
+}
+
+.btnLightBlue.btnFloat:before {
+  background: #5DC8CD;
+}
+
+.btnOrange.btnFloat:before {
+  background: #FFAA40;
+}
+
+.btnPurple.btnFloat:before {
+  background: #8D336A;
+}
+
+
+.btnFloat:before {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
+}
+
+.btnFloat:hover:before {
+  
+}
+button.close{
+  text-align: right;
+}
+
+.btnFloat:hover:before {
+  margin-top: -2px;
+  margin-left: 0px;
+  transform: scale(1.1,1.1);
+  -ms-transform: scale(1.1,1.1);
+  -webkit-transform: scale(1.1,1.1);
+  box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.25);
+}
+a.live_pr{
+      margin:0; 
+      clear: both;
+      float: none;
+      color: #222;
+      font-size: 1rem;
+      text-decoration: overline;
+}
+.img_result{
+    position: relative;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: left;
+    line-height: 1.5;
+    margin: 0 auto;
+    /* width: 950px;
+    min-height: 500px; */
+    font-size: 12px;
+}
+/* .img_result img{
+  width: 950px;
+} */
+.prvemask {
+     position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: transparent;
+    transition: all 0.4s ease-in-out; 
+    /* transition-delay: 0.7s; */
+ }
+.img-fluid {
+    transition: all 0.4s ease-in-out;
+}
+.card {
+    cursor: pointer;
+}
+.card:hover .img-fluid {
+    transform: scale(1.1);
+}
+.card:hover .prvemask {
+    background-color: rgba(255, 153, 0, 0.29);
+}
+.areabox {
+    border: 0px solid #e2e1e1;
+    margin: 25px 0;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.24);
+}
+.areabox h6.lbltext {
+    font-size: 1rem;
+    background-color: #fff;
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.24);
+    display: inline-block;
+    position: absolute;
+    top: -16px;
+    color: #3c3c3c;
+    padding: 7px;
+    border-radius: 3px;
+    left: 10px;
+}
+/* live Data */
+.livedata {
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    z-index: 1045;
+}
+.livedata pre {    
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+}
+.livedata h1 {
+    font-size: 1.2rem;
+    text-decoration: overline;
+}
+/* Group Form */
+.group-form {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.8rem;
+    clear: both;
+}
+.group-form label {    
+    margin-right: 0.6rem; font-size: 1rem; color: #3c3c3c;
+}
+.group-form input[type=text], .group-form input[type=password]{
+    width: 90%;
+}
+
+/* image hover */
+.title-tooltips {
+    position: relative;
+    z-index: 1045; 
+  } 
+  .details {
+    display: inline-block;
+    position: absolute;
+      top: 100%;
+      padding: 10px 15px;
+      z-index: 1046; 
+      display: none;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      color: #222;
+      overflow-y: auto;
+      max-height: 120px;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+  }
+  /* .details:hover {
+      transform: translate(-50%, -50%);
+  } */
+/* SCROLLBAR */
+/* Let's get this party started */
+.details::-webkit-scrollbar { width: 10px; }
+/* Track */
+.details::-webkit-scrollbar-track {
+    background-color: #eee;
+    border: 8px solid transparent;
+    background-clip: content-box; /* THIS IS IMPORTANT */
+}
+/* Handle */
+.details::-webkit-scrollbar-thumb { background-color: #000; border: 1px solid #222; }
+.details::-webkit-scrollbar { background-color: #9e9e9e; }
+  
+  /* dynamic detail content design */
+  .details h1 {font-size: 1rem;}
+  .details h2 {font-size: 0.9rem;}
+  .details h3 {font-size: 0.8rem;}
+  .details h4 {font-size: 0.7rem;}
+  .details h5 {font-size: 0.6rem;}
+  .details h6 {font-size: 0.5rem;}
+ /* End dynamic detail content design */
+
+  /* set left+top */
+  .tips-lt { left: 0px; top: 0px; bottom: auto;}  
+  .tips-lb { left: 0px; bottom: 0px; top: auto;}
+  .tips-rt { right: 0px; top: 0px; bottom: auto;}
+  .tips-rb { right: 0px; bottom: 0px; top: auto;}
+  
+  .arrow-tips {
+    position: absolute;
+    border: 1px solid #f00;
+    border-width: 10px;
+    width: 10px;
+    height: 10px;
+    left: calc(50% - 10px);
+    z-index: 1046; 
+  }
+  .tips-lb .arrow-tips {    
+    border-color: transparent transparent #f00;
+    top: -20px; bottom: auto;
+  }
+  .tips-lt .arrow-tips {    
+    border-color: #f00 transparent transparent;
+    bottom: -20px; top: auto;
+  }
+  .tips-rb .arrow-tips {    
+    border-color: transparent transparent #f00;
+    top: -20px; bottom: auto;
+  }
+  .tips-rt .arrow-tips {    
+    border-color: #f00 transparent transparent;
+    bottom: -20px; top: auto;
+  }
+
+  .title-tooltips:hover > .details,
+  .title-tooltips > .details:hover {
+      display: block;	
+  }
+  
+  
+  /* jQuery enabled behavior for mobile */
+  .touch .title-tooltips.no-hover > .details {
+      display: none !important;	
+  }
+/* End image hover */
+

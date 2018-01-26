@@ -1,0 +1,44 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header text-center header">
+      <a class="navbar-brand text-center link" href="javascript:;" style="color:white">{{lblname}}</a>
+    </div>
+  </div>
+</nav>
+
+<div class="pad_top">
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let imge of img.pic_url; let i = index" class="col-md-4">
+        <!--Card-->
+        <div class="card" (mouseleave)="lblname='Select Image View'" (mouseover)="lblname = imge.name">
+          <!--Card image-->
+          <div class="view overlay hm-white-slight">
+            <img class="img-fluid" [attr.src]="imge.src">
+            <a class="prvemask" title="Preview: {{imge.name}}" routerLink="/preview/{{imge.id}}">
+              <!-- [attr.href]="'#'+imge.id" -->
+              <div class="mask"></div>
+            </a>
+          </div>
+          <!--/.Card image-->
+          <a class="btn-floating btn-action" title="Modify a image" routerLink="/modify/{{imge.id}}">
+            <!-- [attr.href]="'#'+imge.id" -->
+            <i class="fa fa-chevron-right"></i>
+          </a>
+          <!--Card content-->
+          <div class="card-body">
+            <h4 class="card-title">{{imge.name}}</h4>
+          </div>
+          <!--/.Card content-->
+        </div>
+        <div class="title-tooltips">          
+            <img style="width: 100%;height: 150px;" [attr.src]="imge.src" />            
+            <span class="details tips-lb">              
+              <span [innerHTML]="imge.detail"></span>
+              <span class="arrow-tips"></span>
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

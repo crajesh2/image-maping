@@ -1,0 +1,43 @@
+<div class="pad_top">
+  <div class="container">
+    <div class="row">
+      <div class="card-body">
+        <h4 class="card-title">{{img.name}}</h4>
+      </div>
+      <div class="col-md-12">
+        <div class="imgshow" ng-img-map ng-img-map-fns="mapFns" (ngModel)="img"></div>
+        <div class="row">
+          <div class="col-md-9">
+            <button class="btn btn-secondary btn-sm" style="width: auto;" (click)="addArea(img)">Add Area</button>
+            <button class="btn btn-primary btn-sm" style="width: auto;" (click)="saveToPc(img)">Save Json</button>
+            <dl>
+              <dt>custom attr in data, such as 'description'</dt>
+              <dd class="areabox" *ngFor="let map of img.maps; let i = index">
+                <h6 class="lbltext">Area {{i + 1}}</h6>
+                <div class="group-form">
+                  <label>Name:</label>
+                  <input class="form-control input-area" type="text" [(ngModel)]="map.description" (focus)="catchArea(map)" (blur)="releaseArea(map)"
+                  />
+                </div>
+                <div class="group-form">
+                  <label>Image:</label>
+                  <input class="form-control input-area" type="text" [(ngModel)]="map.link_url" (focus)="catchArea(map)" (blur)="releaseArea(map)"
+                  />
+                </div>
+                <div class="clearboth">
+                  <a class="button live_pr" routerLink="/preview/{{img.id}}" href="javascript:;" name='submit_image' id="submit" value="Upload Multiple Image">Live Preview</a>
+                </div>
+              </dd>
+            </dl>
+          </div>
+          <div class="col-md-3">
+            <div class="livedata">
+              <h1>Live Data</h1>
+              <pre>{{imgJson}}</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
