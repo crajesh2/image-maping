@@ -39,8 +39,7 @@
           "description": "Mobile",
           "link_url": "mobile.png"
         }
-      ],
-      "show": "false"
+      ]
     },
     {
       "id": "imgMap2",
@@ -82,8 +81,7 @@
           "description": "Mobile",
           "link_url": "mobile.png"
         }
-      ],
-      "show": "false"
+      ]
     },
     {
       "id": "imgMap3",
@@ -125,8 +123,7 @@
           "description": "Mobile",
           "link_url": "mobile.png"
         }
-      ],
-      "show": "false"
+      ]
     },
     {
       "id": "imgMap4",
@@ -168,8 +165,7 @@
           "description": "Mobile",
           "link_url": "mobile.png"
         }
-      ],
-      "show": "false"
+      ]
     },
     {
       "IdName": "imgMap5",
@@ -211,8 +207,7 @@
           "description": "Mobile",
           "link_url": "mobile.png"
         }
-      ],
-      "show": "false"
+      ]
     }
   ]
 }
